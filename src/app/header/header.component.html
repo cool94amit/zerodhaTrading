@@ -1,7 +1,10 @@
 <mat-toolbar>
   <span>Zerodha Trading</span>
   <span class="spacer"></span>
-  <button mat-icon-button class="login-icon" aria-label="Login">
+  <button mat-icon-button class="login-icon" aria-label="Login" (click)="navigateTo('login')" *ngIf="activepath === 'signup'">
     <mat-icon>key</mat-icon>
+  </button>
+  <button mat-icon-button class="login-icon" aria-label="Login" (click)="navigateTo('signup')" *ngIf="activepath === 'login'">
+    <mat-icon>person</mat-icon>
   </button>
 </mat-toolbar>

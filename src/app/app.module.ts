@@ -13,9 +13,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { EventsService } from './events.service';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignupComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    HeaderComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,9 +31,9 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
